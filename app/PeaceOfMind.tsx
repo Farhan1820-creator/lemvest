@@ -1,4 +1,4 @@
-import { ShieldCheck } from "lucide-react";
+import Image from "next/image";
 
 export default function PeaceOfMind() {
   return (
@@ -7,8 +7,8 @@ export default function PeaceOfMind() {
         <div className="flex flex-col md:flex-row gap-2  max-w-full md:max-w-[90%] xl:max-w-[75%]">
           {/* Left green card */}
           <div className="flex-1 max-w-full md:max-w-[195px] lg:max-w-[220px] xl:max-w-[270px] bg-button-background rounded-2xl p-10 md:p-4 lg:p-2 xl:p-2 flex flex-col items-center justify-center text-center gap-2 lg:gap-3 xl:gap-4">
-            <img src="/pom/shield-light.png" className=" dark:hidden w-8 h-9 text-background" strokeWidth={2}  />
-            <img src="/pom/shield-dark.png" className="hidden dark:block w-8 h-9 text-background" strokeWidth={2}  />
+            <Image src="/pom/shield-light.png" alt="Shield" className=" dark:hidden w-8 h-9 text-background" width={32} height={36} />
+            <Image src="/pom/shield-dark.png" alt="Shield" className="hidden dark:block w-8 h-9 text-background" width={32} height={36} />
             <h3 className="font-primary font-medium max-w-[70%] md:max-w-full text-[20px] md:text-[20px] lg:text-[22px] xl:text-[26px] text-background leading-[24px] tracking-[-3%]">
               Invest with Greater peace of mind
             </h3>
