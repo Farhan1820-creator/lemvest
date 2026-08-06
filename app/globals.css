@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFFFF;
+  --foreground: #000000;
+  --muted: #484848;
+  --muted-foreground: #B3B3B3;
+  --muted-background: #F5F5F5;
+  --button-background: #17438D;
+}
+
+.dark {
+  --background: #000000;
+  --foreground: #ffffff;
+  --muted-foreground: #828282;
+  --muted:#484848;
+  --muted-background: #1a1a1a;
+  --button-background: #6affbd;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-background: var(--muted-background);
+  --color-button-background: var(--button-background);
+  --color-muted: var(--muted);
+  --font-primary: var(--font-aeonik);
+  --font-secondary: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.max-width {
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 40px;
+}
+
+.extra-padding{
+  padding-inline: 120px;
+}
+@media (max-width: 1024px) {
+ .extra-padding{
+  padding-inline: 100px;
+}
+}
+
+@media (max-width: 768px) {
+  .max-width {
+    padding-inline: 22px;
   }
+  .extra-padding{
+  padding-inline: 40px;
+}
+}
+
+@media (max-width: 425px) {
+  .max-width {
+    padding-inline: 22px;
+  }
+  .extra-padding{
+  padding-inline: 14px;
+}
+}
+
+html, body{
+    overflow-x: hidden;
+
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-primary), sans-serif;
 }
