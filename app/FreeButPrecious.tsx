@@ -20,7 +20,7 @@ export default function FreeButPrecious() {
   return (
     <section>
       <div className="max-width extra-padding relative py-20">
-        <h2 className="font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[56px] font-medium text-foreground text-center mb-10">
+        <h2 className="font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[60px] tracking-[-3%] font-medium text-foreground text-center mb-10">
           Free but precious
         </h2>
 

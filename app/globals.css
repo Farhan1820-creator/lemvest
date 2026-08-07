@@ -11,11 +11,15 @@
   --button-background: #17438D;
 }
 
+/* #4e5754
+#b7c1c0
+#808080 */
+
 .dark {
   --background: #000000;
   --foreground: #ffffff;
-  --muted-foreground: #828282;
-  --muted:#484848;
+  --muted-foreground: #808080;
+  --muted:#8b8b8b;
   --muted-background: #1a1a1a;
   --button-background: #6affbd;
 }

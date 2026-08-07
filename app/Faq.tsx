@@ -49,7 +49,7 @@ export default function Faq() {
   return (
     <section>
       <div className="max-width extra-padding relative py-20">
-        <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[56px] font-medium mb-10 md:mb-16">
+        <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[60px] tracking-[-3%] font-medium mb-10 md:mb-16">
           <span className="text-muted-foreground">Frequently asked</span>
           <br />
           <span className="text-foreground">questions</span>

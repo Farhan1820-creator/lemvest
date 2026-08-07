@@ -8,7 +8,7 @@ const statRows = [
 
 function InfoIcon() {
   return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-muted dark:text-muted-foreground shrink-0">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" className="text-muted dark:text-foreground shrink-0">
       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
       <path d="M12 11v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       <circle cx="12" cy="8" r="0.9" fill="currentColor" />
@@ -67,7 +67,7 @@ function CapitalEvolutionChart({ idSuffix }: { idSuffix: string }) {
       viewBox="0 0 291 184"
       fill="none"
       preserveAspectRatio="none"
-      className="w-full h-full block"
+      className="w-full md:w-[50%] lg:w-full h-full block"
     >
       <g clipPath={`url(#${clipId})`}>
         <path d="M28.2305 144.941H287.434" stroke="#EDEEF1" strokeDasharray="2 4" />
@@ -137,42 +137,42 @@ function CapitalEvolutionChart({ idSuffix }: { idSuffix: string }) {
 function TradesBlock({ layout }: { layout: "desktop" | "mobile" }) {
   const gridCols = layout === "desktop" ? "grid-cols-2" : "grid-cols-3";
   return (
-    <div className={`grid ${gridCols} gap-3 ${layout === "desktop" ? "h-full" : ""}`}>
-      <div className="bg-muted-background rounded-2xl p-4 md:p-2 flex flex-col items-center gap-2 text-center">
-        <span className="w-9 h-9 rounded-lg bg-button-background dark:bg-[#68C3C6] flex items-center justify-center">
+    <div className={`grid ${gridCols} gap-1 ${layout === "desktop" ? "h-full" : ""}`}>
+      <div className="bg-muted-background rounded-2xl p-2  xl:p-3 flex flex-col items-center justify-center gap-1.5 xl:gap-2 text-center">
+        <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-lg bg-button-background dark:bg-[#68C3C6] flex items-center justify-center">
           <TrendUpIcon />
         </span>
-        <span className="font-secondary font-medium text-[10px] text-muted dark:text-muted-foreground uppercase tracking-[-3%] leading-[130%]">
+        <span className="font-secondary font-medium text-[10px] lg:text-[9px] xl:text-[10px] leading-[130%] tracking-[-3%] text-muted dark:text-muted-foreground uppercase">
           Winning Trades
         </span>
-        <span className="font-primary text-[20px] font-medium text-foreground leading-[20px] tracking-[-2%]">13</span>
-        <span className="font-secondary text-[12px] leading-[130%] tracking-[-3%] font-medium text-muted dark:text-muted-foreground -mt-2">65%</span>
+        <span className="font-primary text-[20px] lg:text-[18px] xl:text-[20px] leading-[20px] tracking-[-2%] font-medium text-foreground ">13</span>
+        <span className="font-secondary text-[12px] lg:text-[10px] xl:text-[12px] leading-[130%] tracking-[-3%] font-medium text-muted dark:text-muted-foreground -mt-2">65%</span>
       </div>
 
-      <div className="bg-muted-background rounded-2xl p-4 md:p-2 flex flex-col items-center gap-2 text-center">
-        <span className="w-9 h-9 rounded-lg bg-button-background dark:bg-[#68C3C6] flex items-center justify-center">
+      <div className="bg-muted-background rounded-2xl p-2 xl:p-3 flex flex-col items-center justify-center gap-1.5 xl:gap-2 text-center">
+        <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-lg bg-button-background dark:bg-[#68C3C6] flex items-center justify-center">
           <TrendDownIcon />
         </span>
-        <span className="font-secondary text-[11px] md:text-xs text-muted dark:text-muted-foreground uppercase tracking-[-3%] leading-[130%]">
+        <span className="font-secondary text-[10px] lg:text-[9px] xl:text-[10px] leading-[130%] tracking-[-3%]  text-muted dark:text-muted-foreground uppercase">
           Losing Trades
         </span>
-        <span className="font-primary text-[20px] font-medium  leading-[20px] tracking-[-2%] text-foreground">7</span>
-        <span className="font-secondary text-[12px] leading-[130%] tracking-[-3%] font-medium  text-muted dark:text-muted-foreground -mt-2">35%</span>
+        <span className="font-primary text-[20px] lg:text-[18px] xl:text-[20px] leading-[20px] tracking-[-2%] font-medium text-foreground">7</span>
+        <span className="font-secondary text-[12px] lg:text-[10px] xl:text-[12px] leading-[130%] tracking-[-3%] font-medium  text-muted dark:text-muted-foreground -mt-2">35%</span>
       </div>
 
       <div
-        className={`bg-muted-background rounded-2xl p-4 md:p-2 flex flex-col items-center gap-2 text-center ${
+        className={`bg-muted-background rounded-2xl p-2 xl:p-3 flex flex-col items-center justify-center gap-1.5 xl:gap-2 text-center ${
           layout === "desktop" ? "col-span-2" : ""
         }`}
       >
-        <span className="w-9 h-9 rounded-lg bg-button-background dark:bg-[#68C3C6] flex items-center justify-center">
+        <span className="w-8 h-8 xl:w-9 xl:h-9 rounded-lg bg-button-background dark:bg-[#68C3C6] flex items-center justify-center">
           <CalendarIcon />
         </span>
-        <span className="font-secondary text-[10px]  text-muted dark:text-muted-foreground uppercase tracking-[-3%] leading-[130%]">
+        <span className="font-secondary text-[10px] lg:text-[9px] xl:text-[10px] leading-[130%] tracking-[-3%] text-muted dark:text-muted-foreground uppercase ">
           Total Trades
         </span>
-        <span className="font-primary text-xl md:text-2xl font-medium text-foreground">20</span>
-        <span className="font-secondary text-[12px] leading-[130%] tracking-[-3%] font-medium text-muted dark:text-muted-foreground -mt-2">100%</span>
+        <span className="font-primary text-[20px] lg:text-[18px] xl:text-[20px] leading-[20px] tracking-[-2%] font-medium text-foreground">20</span>
+        <span className="font-secondary text-[12px] lg:text-[10px] xl:text-[12px] leading-[130%] tracking-[-3%] font-medium text-muted dark:text-muted-foreground -mt-2">100%</span>
       </div>
     </div>
   );
@@ -180,24 +180,24 @@ function TradesBlock({ layout }: { layout: "desktop" | "mobile" }) {
 
 function EstimatedResultBlock() {
   return (
-    <div className="bg-muted-background rounded-2xl p-4 flex flex-col items-center justify-center gap-4 text-center h-full">
-      <div className="flex flex-col gap-1">
-        <span className="font-secondary text-[12px] text-muted dark:text-muted-foreground uppercase tracking-wide">
+    <div className="bg-muted-background rounded-2xl p-3 flex flex-col items-center justify-center gap-2 text-center h-full">
+      <div className="flex flex-col items-center justify-center gap-1">
+        <span className="font-secondary text-[12px] lg:text-[10px] xl:text-[12px] text-muted dark:text-muted-foreground uppercase tracking-wide">
           Estimated Result
         </span>
-        <span className="font-primary text-[24px] font-medium text-button-background dark:text-[#74fac5]">+1,900 $</span>
+        <span className="font-primary  text-[24px] lg:text-[20px] xl:text-[24px] font-medium text-button-background dark:text-[#74fac5]">+1,900 $</span>
       </div>
       <span className="w-full h-px bg-white/20" />
       <div className="flex flex-col gap-1">
-        <span className="font-secondary text-[12px] text-muted dark:text-muted-foreground uppercase tracking-wide">
+        <span className="font-secondary text-[12px] lg:text-[10px] xl:text-[12px] text-muted dark:text-muted-foreground uppercase tracking-wide">
           Final Capital
         </span>
-        <span className="font-primary text-[24px] font-medium text-button-background dark:text-[#74fac5]">2,900 $</span>
+        <span className="font-primary text-[24px] lg:text-[20px] xl:text-[24px] font-medium text-button-background dark:text-[#74fac5]">2,900 $</span>
       </div>
-      <div className="w-full flex items-center justify-center gap-1.5 bg-button-background dark:bg-[#2a483c] text-[12px] rounded-xl px-3 py-2">
+      <div className="w-full flex items-center justify-center gap-4 xl:gap-1.5 bg-button-background dark:bg-[#2a483c] text-[12px] rounded-xl px-3 py-2">
         <TrendUpIconGreen />
-        <span className="font-primary text-background dark:text-[#6affbd] font-[400] text-[10px] md:text-[12px]">
-          AN INCREASE OF +190.0% ON YOUR INITIAL CAPITAL
+        <span className="font-primary text-left text-background  py-1 dark:text-[#6affbd] font-light text-[11px] xl:text-[12px]">
+            AN INCREASE OF +190.0% ON YOUR INITIAL CAPITAL
         </span>
       </div>
     </div>
@@ -206,11 +206,11 @@ function EstimatedResultBlock() {
 
 function StatsRows() {
   return (
-    <div className="flex flex-col divide-y divide-muted-foreground/15">
+    <div className="flex flex-col divide-y-2 divide-[#8c8c8c]">
       {statRows.map((row) => (
-        <div key={row.label} className="flex items-center justify-between py-3 first:pt-0 last:pb-0">
-          <span className="font-secondary text-sm text-muted dark:text-muted-foreground">{row.label}</span>
-          <span className={`font-secondary text-sm font-medium ${row.color}`}>{row.value}</span>
+        <div key={row.label} className="flex items-center justify-between py-[3px] xl:py-[6px] pt-2 xl:pt-3 first:pt-0 last:pb-0">
+          <span className="font-secondary text-[12px] lg:text-[10px] xl:text-[12px] leading-[130%] tracking-[-3%] text-muted dark:text-muted-foreground">{row.label}</span>
+          <span className={`font-primary text-[14px] lg:text-[12px] xl:text-[14px] leading-[18px] xl:leading-[20px] tracking-[-2%]  font-medium ${row.color}`}>{row.value}</span>
         </div>
       ))}
     </div>
@@ -221,6 +221,7 @@ export default function Simulator() {
   return (
     <section className="py-20">
       <div className="max-width relative">
+        <div className="px-7 xl:px-10">
         <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-[42px] lg:leading-[46px] xl:leading-[50px] tracking-[-2%] font-medium mb-4">
           <span className="text-foreground">Simulate your</span>
           <br />
@@ -308,34 +309,35 @@ export default function Simulator() {
         </div>
 
         {/* DESKTOP: trades | estimated result | chart+stats */}
-        <div className="hidden md:grid grid-cols-[1.7fr_1.5fr_2.8fr] gap-3 mb-10 items-stretch">
+        <div className="hidden lg:grid lg:grid-cols-[1.3fr_1.2fr_2.2fr]  xl:grid-cols-[1.3fr_1.3fr_2fr] gap-2 mb-10 items-stretch">
           <TradesBlock layout="desktop" />
+          
           <EstimatedResultBlock />
-          <div className="bg-muted-background rounded-2xl p-5 flex flex-row gap-5 min-w-0">
-            <div className="flex-1 min-w-0 flex flex-col justify-center gap-3">
-              <span className="flex items-center gap-1.5 font-secondary text-[13px] text-foreground uppercase tracking-wide">
+          <div className="bg-muted-background rounded-2xl   p-4 flex flex-row gap-3 min-w-0">
+            <div className=" min-w-0 flex-1 flex flex-col  justify-between ">
+              <span className="flex  items-center gap-1.5 font-secondary text-[10px] xl:text-[14px] text-muted dark:text-muted-foreground uppercase leading-[130%] tracking-[-3%]">
                 Estimated Capital Evolution <InfoIcon />
               </span>
-              <div className="w-full h-[190px]">
-                <CapitalEvolutionChart idSuffix="desktop" />
+              <div className=" w-full  h-[150px] xl:h-[180px]">
+                <CapitalEvolutionChart  idSuffix="desktop" />
               </div>
             </div>
-            <span className="w-px bg-muted-foreground/15 shrink-0" />
-            <div className="w-56 shrink-0 flex flex-col justify-center">
+            <span className="w-px bg-[#EDEEF1] shrink-0" />
+            <div className="w-[45%] xl:w-[40%] shrink-0 flex flex-col pt-3">
               <StatsRows />
             </div>
           </div>
         </div>
 
         {/* MOBILE: trades row | estimated result | chart card | stats card */}
-        <div className="flex md:hidden flex-col gap-3 mb-10">
+        <div className="flex lg:hidden flex-col gap-3 mb-10">
           <TradesBlock layout="mobile" />
           <EstimatedResultBlock />
           <div className="bg-muted-background rounded-2xl p-5 flex flex-col gap-4">
             <span className="flex items-center gap-1.5 font-secondary text-[13px] text-foreground uppercase tracking-wide">
               Estimated Capital Evolution <InfoIcon />
             </span>
-            <div className="w-full h-[200px]">
+            <div className="flex items-center justify-center w-full h-[200px]">
               <CapitalEvolutionChart idSuffix="mobile" />
             </div>
             <div className="pt-2 border-t border-muted-foreground/15">
@@ -352,6 +354,7 @@ export default function Simulator() {
             Join Lemvest
           </button>
         </div>
+      </div>
       </div>
     </section>
   );

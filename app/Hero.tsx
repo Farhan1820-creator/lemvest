@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-[90vh] md:h-[95vh]  lg:h-[87vh] dark:lg:h-screen overflow-hidden  px-2 md:px-16 lg:px-30 z-2 ">
       {/* Background image - adjust top/height/opacity here as needed */}
-<div className="absolute hidden dark:block bottom-[-95px] left-0 w-full h-full -z-10">
+<div className="absolute hidden dark:block bottom-[-60px] left-0 w-full h-full -z-10">
   <Image
     src="/hero/bg.png"
     alt=""
@@ -49,7 +49,7 @@ export default function Hero() {
         {sideCards.map((card, i) => (
           <div
             key={i}
-            className={`items-center justify-center hidden lg:flex absolute shadow-xl dark:shadow-none ${card.position} w-[175px] h-[158px]  xl:w-[185px] xl:h-[163px] rounded-3xl bg-muted-background backdrop-blur-sm ${card.rotate} trackding-[-2%]`}
+            className={`items-center justify-center hidden lg:flex absolute shadow-xl dark:shadow-none ${card.position} w-[175px] h-[158px] xl:w-[185px] xl:h-[163px] rounded-3xl bg-muted-background backdrop-blur-sm ${card.rotate} trackding-[-2%]`}
           >
             <img
             src="/hero/pin.svg"
@@ -57,7 +57,7 @@ export default function Hero() {
             />
             <div className="flex flex-col items-center justify-center gap-2 p-5 rotate-[-3deg] ">
               <card.icon size={28} className="text-foreground" />
-              <span className="font-primary font-normal text-[16px] text-foreground">
+              <span className="font-primary font-normal text-[15px] xl:text-[16px] text-foreground">
                 {card.label}
               </span>
             </div>
@@ -67,7 +67,7 @@ export default function Hero() {
         {/* Center content */}
         <div className="flex flex-col items-center gap-8  pt-5 md:pt-10 lg:pt-20 ">
           <div className=" w-full md:w-[70%] lg:w-[60%] xl:w-[48%] 2xl:w-[40%] flex flex-col items-center gap-4 lg:gap-3 xl:gap-5 mx-auto">
-          <h1 className="font-primary font-medium text-[36px] md:text-[45px] lg:text-[48px] xl:text-[60px] leading-[36px] md:leading-[45px] xl:leading-[56px] tracking-[-0.03em] text-center text-muted-foreground">
+          <h1 className="font-primary font-medium text-[36px] md:text-[45px] lg:text-[48px] xl:text-[60px] leading-[36px] md:leading-[45px] xl:leading-[56px] tracking-[-0.03em] text-center text-muted-foreground dark:text-[#515b5a]">
             You don&apos;t need to do more -{" "}
             <span className="text-foreground">You need a better system</span>
           </h1>

@@ -8,9 +8,10 @@ import Footer from "@/components/Footer";
 
 const aeonik = localFont({
   src: [
+    { path: '../fonts/aeonik-font/Aeonik-Light.otf', weight: '300', style: 'light' },
     { path: '../fonts/aeonik-font/Aeonik-Regular.otf', weight: '400', style: 'normal' },
-    { path: '../fonts/aeonik-font/Aeonik-Medium.ttf', weight: '400', style: 'normal' },
-    { path: '../fonts/aeonik-font/Aeonik-Bold.otf', weight: '700', style: 'normal' },
+    { path: '../fonts/aeonik-font/Aeonik-Medium.ttf', weight: '500', style: 'medium' },
+    { path: '../fonts/aeonik-font/Aeonik-Bold.otf', weight: '700', style: 'bold' },
   ],
   variable: '--font-aeonik',
 })

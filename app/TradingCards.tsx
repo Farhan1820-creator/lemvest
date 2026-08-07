@@ -1,14 +1,14 @@
 import Image from "next/image";
-import type { TradingCardData } from "@/lib/tradingCards";
+import type { TradingCardData } from "@/app/TradingData";
 
 const heightBySize: Record<TradingCardData["size"], string> = {
-  lg: "h-[300px] sm:h-[340px] md:h-[360px] xl:h-[402px]",
+  lg: "h-[300px] sm:h-[340px] md:h-[360px]  xl:h-[402px]",
   md: "h-[260px] sm:h-[290px] md:h-[310px] xl:h-[346px]",
   wide: "h-[300px] sm:h-[340px] md:h-[380px] xl:h-[445.33px]",
 };
 
 // Uniform height used only inside the slider, same for every card
-const sliderHeight = "h-[300px] sm:h-[340px] md:h-[360px] xl:h-[402px]";
+const sliderHeight = "h-[300px] sm:h-[340px] md:h-[360px] lg:h-[402px] xl:h-[402px]";
 
 export default function TradingCard({
   card,
