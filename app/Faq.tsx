@@ -80,7 +80,7 @@ export default function Faq() {
                 >
                   <span
                     className={`block font-primary text-[14px] tracking-[-2%] font-medium text-foreground  ${
-                      isOpen ? "border-b border-white/15 pb-2" : ""
+                      isOpen ? "border-b-2 border-muted/70 dark:border-muted-foreground pb-2" : ""
                     }`}
                   >
                     {item.question}
@@ -93,7 +93,7 @@ export default function Faq() {
                     }}
                   >
                     <div className="overflow-hidden">
-                      <p className="pt-3 font-secondary text-sm text-muted-foreground leading-relaxed">
+                      <p className="pt-3 font-primary text-[14px] tracking-[-2%] font-[400] text-muted dark:text-muted-foreground leading-relaxed">
                         {item.answer}
                       </p>
                     </div>

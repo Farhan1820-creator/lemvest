@@ -34,7 +34,7 @@ export default function ForYou() {
       <div className="max-width relative pb-20 extra-padding -mt-2 md:mt-0">
         <div className="flex flex-col md:flex-row  md:justify-between gap-4 xl:gap-6 mb-8 xl:mb-10 ">
           <h2 className="font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px]  font-medium text-foreground leading-[36px] md:leading-[42px] lg:leading-[46px] xl:leading-[56px] tracking-[-3%]">
-            <span className="text-muted-foreground">
+            <span className="text-foreground dark:text-muted-foreground">
             Lemvest is for you
             </span>
             <br />

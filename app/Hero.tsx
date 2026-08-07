@@ -17,7 +17,7 @@ const sideCards = [
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[90vh] md:min-h-[95vh] lg:min-h-screen overflow-hidden  px-2 md:px-16 lg:px-30 z-2">
+    <section className="relative w-full h-[90vh] md:h-[95vh]  lg:h-[87vh] dark:lg:h-screen overflow-hidden  px-2 md:px-16 lg:px-30 z-2 ">
       {/* Background image - adjust top/height/opacity here as needed */}
 <div className="absolute hidden dark:block bottom-[-95px] left-0 w-full h-full -z-10">
   <Image

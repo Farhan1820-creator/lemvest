@@ -196,7 +196,7 @@ function EstimatedResultBlock() {
       </div>
       <div className="w-full flex items-center justify-center gap-1.5 bg-button-background dark:bg-[#2a483c] text-[12px] rounded-xl px-3 py-2">
         <TrendUpIconGreen />
-        <span className="font-primary text-background dark:text-[#6affbd] font-medium text-[10px] md:text-[12px]">
+        <span className="font-primary text-background dark:text-[#6affbd] font-[400] text-[10px] md:text-[12px]">
           AN INCREASE OF +190.0% ON YOUR INITIAL CAPITAL
         </span>
       </div>
@@ -221,12 +221,12 @@ export default function Simulator() {
   return (
     <section className="py-20">
       <div className="max-width relative">
-        <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[56px] font-medium mb-4">
+        <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-[42px] lg:leading-[46px] xl:leading-[50px] tracking-[-2%] font-medium mb-4">
           <span className="text-foreground">Simulate your</span>
           <br />
           <span className="text-foreground">trading results</span>
         </h2>
-        <p className="text-center font-secondary text-sm text-muted dark:text-muted-foreground max-w-md mx-auto mb-10">
+        <p className="text-center font-primary text-[14px] tracking-[-2%]  text-muted dark:text-muted-foreground max-w-md mx-auto mb-10">
           Estimate how your capital can grow based on your win rate, risk/reward and capital.
         </p>
 
@@ -297,14 +297,14 @@ export default function Simulator() {
         </div>
 
         {/* Divider */}
-        <div className="flex items-center gap-4 mb-6">
-          <span className="flex-1 h-px bg-muted-foreground/20" />
+        <div className="flex items-center justify-center mb-6">
+          <span className="w-[20%] h-px bg-muted-foreground/20" />
           <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40" />
-          <h3 className="font-secondary text-lg font-medium text-foreground uppercase tracking-wide whitespace-nowrap">
+          <h3 className="font-primary text-[24px] px-4 tracking-[-2%] font-medium text-foreground uppercase tracking-wide whitespace-nowrap">
             Simulation Results
           </h3>
           <span className="w-1.5 h-1.5 rounded-full bg-muted-foreground/40" />
-          <span className="flex-1 h-px bg-muted-foreground/20" />
+          <span className="w-[20%] h-px bg-muted-foreground/20" />
         </div>
 
         {/* DESKTOP: trades | estimated result | chart+stats */}
