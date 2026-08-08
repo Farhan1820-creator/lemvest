@@ -66,7 +66,7 @@ const sideCards = [
 ];
 
   return (
-    <section className="relative w-full h-[90vh] md:h-[95vh]  lg:h-[87vh] dark:lg:h-screen overflow-hidden  px-2 md:px-16 lg:px-30 z-2 ">
+    <section className="relative w-full h-[90vh] md:h-[95vh]  lg:h-[87vh] dark:lg:h-screen overflow-hidden  px-2 md:px-16 lg:px-30  ">
       {/* Background image - adjust top/height/opacity here as needed */}
 <div className="absolute hidden dark:block bottom-[-95px] md:bottom-[-60px] left-0 w-full h-full -z-10">
   <Image
@@ -74,7 +74,14 @@ const sideCards = [
     alt=""
     fill
     priority
-    className="object-cover object-top hidden lg:flex"
+    className="absolute object-cover object-top hidden xl:flex"
+  />
+  <Image
+    src="/hero/bg-lg.png"
+    alt=""
+    fill
+    priority
+    className="absolute object-cover object-center hidden lg:flex xl:hidden "
   />
   <Image
     src="/hero/bg-mobile.png"
@@ -88,7 +95,7 @@ const sideCards = [
     alt=""
     fill
     priority
-    className="object-cover object-center  md:hidden"
+    className="object-cover object-center md:hidden"
   />
 </div>
 
@@ -124,7 +131,7 @@ const sideCards = [
             Whatever your level of experience, Lemvest helps you to learn, improve and grow financially through a comprehensive trading ecosystem.
           </p>
 
-          <button className="bg-button-background mt-3 text-background font-primary font-medium text-[16px]  leading-[100%] tracking-[-3%] capitalize px-5 py-[14px] md:px-[20px] md:py-[14px] rounded-lg hover:opacity-90 transition-opacity outline-1 outline-background -outline-offset-[2px] shadow-[1px_-1px_0px_0px_#0000001A_inset,2px_-2px_0px_0px_#00000040_inset] flex items-center justify-center">
+          <button className="bg-button-background text-background font-primary text-[16px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium px-5 py-[13px] xl:px-5 xl:py-[14px] rounded-lg tracking-[-3%] leading-none mt-3 hover:opacity-90 transition-opacity outline-1 outline-background -outline-offset-[2px] shadow-[1px_-1px_0px_0px_#0000001A_inset,2px_-2px_0px_0px_#00000040_inset] flex items-center justify-center">
             Join Lemvest
           </button>
 </div>

@@ -19,7 +19,7 @@ const items = [
 export default function FreeButPrecious() {
   return (
     <section>
-      <div className="max-width extra-padding relative py-20">
+      <div className="max-width extra-padding relative py-14 md:py-16 lg:py-18 xl:py-20">
         <h2 className="font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[60px] tracking-[-3%] font-medium text-foreground text-center mb-10">
           Free but precious
         </h2>
@@ -56,7 +56,7 @@ export default function FreeButPrecious() {
         </div>
 
         <div className="flex justify-center mt-10">
-          <button className="inline-flex items-center justify-center  bg-button-background  font-primary  font-medium text-background text-[16px] tracking-[-3%] px-6 py-3 rounded-lg outline outline-background -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset] ">
+          <button className="inline-flex items-center justify-center  bg-button-background text-background font-primary text-[16px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium px-5 py-[13px] xl:px-5 xl:py-[14px] rounded-lg tracking-[-3%] leading-none outline outline-background -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset] ">
             Join Lemvest
           </button>
         </div>

@@ -167,7 +167,7 @@ export default function TradingSlider({ cards }: { cards: TradingCardData[] }) {
       </div>
 
       <div className="flex w-full items-center justify-center">
-        <button className="mt-6 inline-flex items-center justify-center tracking-[-3%] rounded-lg bg-button-background px-6 py-3 font-primary text-[16px] font-medium text-background outline outline-background -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]">
+        <button className="mt-6 inline-flex items-center justify-center bg-button-background text-background font-primary text-[16px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium px-5 py-[13px] xl:px-5 xl:py-[14px] rounded-lg tracking-[-3%] leading-none outline outline-background -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]">
           Join Lemvest
         </button>
       </div>

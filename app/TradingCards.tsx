@@ -2,20 +2,20 @@ import Image from "next/image";
 import type { TradingCardData } from "@/app/TradingData";
 
 const heightBySize: Record<TradingCardData["size"], string> = {
-  lg: "h-[300px] sm:h-[340px] md:h-[360px]  xl:h-[400px]",
-  md: "h-[260px] sm:h-[290px] md:h-[310px] xl:h-[346px]",
-  wide: "h-[300px] sm:h-[340px] md:h-[380px] xl:h-[445.33px]",
+  lg:   "h-[300px] sm:h-[340px] md:h-[360px] xl:h-[400px]",
+  md:   "h-[260px] sm:h-[290px] md:h-[360px] xl:h-[346px]",
+  wide: "h-[300px] sm:h-[340px] md:h-[360px] xl:h-[445.33px]",
 };
 
-// Fixed text-block height per size, so image (flex-1) gets a consistent
-// remaining space regardless of how long each card's description is.
 const textHeightBySize: Record<TradingCardData["size"], string> = {
   lg: "h-[92px] xl:h-[96px]",
   md: "h-[92px] xl:h-[96px]",
   wide: "h-[92px] xl:h-[96px]",
 };
 
-const sliderHeight = "h-[300px] sm:h-[340px] md:h-[360px] lg:h-[402px] xl:h-[402px]";
+// Recalculated so image (aspect-4/3) + gap + text block + padding
+// actually fits at every breakpoint instead of overflowing
+const sliderHeight = "h-[400px] sm:h-[420px] md:h-[360px] lg:h-[402px] xl:h-[402px]";
 const sliderTextHeight = "h-[92px] xl:h-[96px]";
 
 export default function TradingCard({
@@ -31,7 +31,7 @@ export default function TradingCard({
 
   return (
     <div
-      className={`w-full rounded-[16px] xl:rounded-[14.81px] bg-muted-background p-[16px] xl:p-[14.81px] flex flex-col items-start ${heightClass}`}
+      className={`w-full rounded-[16px] xl:rounded-[14.81px] bg-muted-background p-[16px] xl:p-[14.81px] flex flex-col items-start overflow-hidden ${heightClass}`}
     >
       <div
         className={`relative w-full rounded-xl overflow-hidden mb-4 ${

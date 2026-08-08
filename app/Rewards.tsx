@@ -18,7 +18,7 @@ const notes = [
 export default function Rewards() {
   return (
     <section>
-      <div className="max-width extra-padding relative py-20">
+      <div className="max-width extra-padding relative py-14 md:py-16 lg:py-18 xl:py-20">
         <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[60px] tracking-[-2%] font-medium mb-10 md:mb-16">
           <span className="text-muted-foreground">Share Lemvest,</span>
           <br />
@@ -35,7 +35,7 @@ export default function Rewards() {
             </p>
             <button
               type="button"
-              className="bg-button-background text-background font-primary  text-[12px] lg:text-[14px] xl:text-[16px] font-medium  px-5 py-[10px] xl:px-6 xl:py-3 rounded-lg tracking-[-3%] outline -outline-offset-[3px] outline-background shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]"
+              className="bg-button-background text-background font-primary text-[16px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium px-5 py-[13px] xl:px-5 xl:py-[14px] rounded-lg tracking-[-3%] leading-none outline -outline-offset-[3px] outline-background shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]"
             >
               Join Lemvest
             </button>

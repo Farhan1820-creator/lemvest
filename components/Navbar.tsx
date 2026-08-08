@@ -56,16 +56,35 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Hamburger - mobile */}
-        <button
-          className="lg:hidden flex flex-col justify-center items-center gap-[5px] w-9 h-9 z-50"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle menu"
-        >
-          <span className={`block w-6 h-[2px] bg-foreground transition-transform ${isOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-          <span className={`block w-6 h-[2px] bg-foreground transition-opacity ${isOpen ? "opacity-0" : ""}`} />
-          <span className={`block w-6 h-[2px] bg-foreground transition-transform ${isOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
-        </button>
+        {/* Mobile: ThemeToggle + Join button + Hamburger, all in the nav row
+            (moved out of the drawer per request — drawer keeps only links) */}
+        <div className="lg:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            className="bg-button-background text-background font-primary text-[14px] font-medium rounded-lg hover:opacity-90 transition-opacity outline-1 outline-background -outline-offset-[2px] shadow-[1px_-1px_0px_0px_#0000001A_inset,2px_-2px_0px_0px_#00000040_inset] flex items-center justify-center"
+            style={{
+              width: "114px",
+              height: "36px",
+              paddingTop: "14px",
+              paddingRight: "14px",
+              paddingBottom: "14px",
+              paddingLeft: "14px",
+            }}
+          >
+            Join For Free
+          </button>
+
+          {/* Hamburger */}
+          <button
+            className="flex flex-col justify-center items-center gap-[5px] w-9 h-9 z-50"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={`block w-6 h-[2px] bg-foreground transition-transform ${isOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
+            <span className={`block w-6 h-[2px] bg-foreground transition-opacity ${isOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-[2px] bg-foreground transition-transform ${isOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+          </button>
+        </div>
       </nav>
 
       {/* Overlay */}
@@ -76,9 +95,9 @@ export default function Navbar() {
         onClick={() => setIsOpen(false)}
       />
 
-      {/* Right side full-height drawer */}
+      {/* Right side full-height drawer — links only now */}
       <div
-        className={`lg:hidden fixed top-0 right-0 h-full w-[75%] max-w-[320px] bg-background z-40 transform transition-transform duration-300 ease-in-out flex flex-col justify-between py-24 px-8 ${
+        className={`lg:hidden fixed top-0 right-0 h-full w-[75%] max-w-[320px] bg-background z-40 transform transition-transform duration-300 ease-in-out flex flex-col justify-center py-24 px-8 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -95,15 +114,6 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-
-        <div className="flex flex-col gap-4">
-          <ThemeToggle />
-          <button
-            className="bg-button-background text-background font-primary text-[14px] font-medium rounded-lg hover:opacity-90 transition-opacity outline-1 outline-background -outline-offset-[2px] shadow-[1px_-1px_0px_0px_#0000001A_inset,2px_-2px_0px_0px_#00000040_inset] flex items-center justify-center w-full h-[40px]"
-          >
-            Join For Free
-          </button>
-        </div>
       </div>
     </header>
   );

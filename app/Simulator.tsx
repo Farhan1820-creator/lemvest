@@ -219,9 +219,9 @@ function StatsRows() {
 
 export default function Simulator() {
   return (
-    <section className="py-20">
+    <section className="py-14 md:py-16 lg:py-18 xl:py-20">
       <div className="max-width relative">
-        <div className="px-7 xl:px-10">
+        <div className="md:px-7 xl:px-10">
         <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-[42px] lg:leading-[46px] xl:leading-[50px] tracking-[-2%] font-medium mb-4">
           <span className="text-foreground">Simulate your</span>
           <br />
@@ -232,18 +232,18 @@ export default function Simulator() {
         </p>
 
         {/* Input cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-10 items-center justify-center">
           <div className="bg-muted-background rounded-2xl p-4 flex flex-col gap-3">
-            <span className="flex items-center gap-1.5 font-secondary text-sm text-muted dark:text-[#bbbbbb]">
+            <span className="flex items-center gap-1.5 font-secondary text-[12px] md:text-[14px] leading-[130%] tracking-[-3%] text-muted dark:text-[#bbbbbb]">
               Initial Capital <InfoIcon />
             </span>
             <div className="flex items-center justify-between">
-              <span className="font-primary text-[20px] lg:text-[22px] xl:text-[24px] font-medium text-foreground">1000</span>
-              <span className="font-primary text-[20px] lg:text-[22px] xl:text-[24px] font-medium text-foreground">$</span>
+              <span className="font-primary text-[20px] lg:text-[22px] xl:text-[24px]  leading-[20px] tracking-[-2%] font-medium text-foreground">1000</span>
+              <span className="font-primary text-[20px] lg:text-[22px] xl:text-[24px] leading-[20px] tracking-[-2%] font-medium text-foreground">$</span>
             </div>
             <div className="flex flex-col gap-1">
               <input type="range" defaultValue={1000} min={100} max={100000} className="w-full accent-black dark:accent-white" />
-              <div className="flex justify-between font-secondary text-xs text-muted dark:text-[#bbbbbb]">
+              <div className="flex justify-between font-primary text-[12px] md:text-[14px] tracking-[-2%] leading-none text-muted dark:text-[#bbbbbb]">
                 <span>100 $</span>
                 <span>100,000 $</span>
               </div>
@@ -251,13 +251,13 @@ export default function Simulator() {
           </div>
 
           <div className="bg-muted-background rounded-2xl p-4 flex flex-col gap-3">
-            <span className="flex items-center gap-1.5 font-secondary text-sm text-[#484848] dark:text-[#bbbbbb]">
+            <span className="flex items-center gap-1.5 font-secondary text-[12px] md:text-[14px] tracking-[-3%] leading-[130%] text-[#484848] dark:text-[#bbbbbb]">
               Win Rate <InfoIcon />
             </span>
-            <span className="font-primary text-2xl font-medium text-foreground">65%</span>
+            <span className="font-primary text-[20px] lg:text-[22px] xl:text-[24px] tracking-[-2%] leading-[20px] font-medium text-foreground">65%</span>
             <div className="flex flex-col gap-1">
               <input type="range" defaultValue={65} min={1} max={99} className="w-full accent-black dark:accent-white" />
-              <div className="flex justify-between font-secondary text-xs text-muted dark:text-[#bbbbbb]">
+              <div className="flex justify-between font-[primary] text-[12px] md:text-[14px] tracking-[-2%] leading-none text-muted dark:text-[#bbbbbb]">
                 <span>1%</span>
                 <span>99%</span>
               </div>
@@ -265,16 +265,16 @@ export default function Simulator() {
           </div>
 
           <div className="bg-muted-background rounded-2xl p-4 flex flex-col gap-3">
-            <span className="flex items-center gap-1.5 font-secondary text-sm text-muted dark:text-[#bbbbbb]">
+            <span className="flex items-center gap-1.5 font-secondary text-[12px] md:text-[14px] leading-[130%] tracking-[-3%] text-muted dark:text-[#bbbbbb]">
               Risk / Reward <InfoIcon />
             </span>
-            <span className="font-primary text-2xl font-medium text-foreground">1 : 2</span>
+            <span className="font-primary  text-[20px] lg:text-[22px] xl:text-[24px] leading-[20px] tracking-[-2%] font-medium text-foreground">1 : 2</span>
             <div className="flex gap-1 flex-wrap">
               {["1:1", "1:1.5", "1:2", "1:3"].map((option) => (
                 <button
                   key={option}
                   type="button"
-                  className="rounded-lg py-1 px-3 font-primary tracking-[-2%] text-[14px] bg-white dark:bg-[#000005] text-muted dark:text-muted-foreground"
+                  className="rounded-lg  py-2 px-2 xl:py-[9px] xl:px-4  font-primary tracking-[-2%] leading-none text-[12px] md:text-[14px] bg-white dark:bg-[#000005] text-muted dark:text-muted-foreground"
                 >
                   {option}
                 </button>
@@ -283,13 +283,13 @@ export default function Simulator() {
           </div>
 
           <div className="bg-muted-background rounded-2xl p-4 flex flex-col gap-3">
-            <span className="flex items-center gap-1.5 font-secondary text-sm text-muted dark:text-[#bbbbbb]">
+            <span className="flex items-center gap-1.5 font-secondary text-[12px] md:text-[14px] leading-[130%] tracking-[-3%] text-muted dark:text-[#bbbbbb]">
               Number of Trades <InfoIcon />
             </span>
-            <span className="font-primary text-2xl font-medium text-foreground">20</span>
+            <span className="font-primary text-[20px] lg:text-[22px] xl:text-[24px] leading-[20px] tracking-[-2%] font-medium text-foreground">20</span>
             <div className="flex flex-col gap-1">
               <input type="range" defaultValue={20} min={1} max={500} className="w-full accent-black dark:accent-white" />
-              <div className="flex justify-between font-secondary text-xs text-muted dark:text-[#bbbbbb]">
+              <div className="flex justify-between font-secondary  text-[12px] md:text-[14px] tracking-[-2%] leading-none text-muted dark:text-[#bbbbbb]">
                 <span>1</span>
                 <span>500</span>
               </div>
@@ -349,7 +349,7 @@ export default function Simulator() {
         <div className="flex justify-center">
           <button
             type="button"
-            className="bg-button-background text-background font-primary text-[16px] font-medium  tracking-[-3%] px-6 py-3 rounded-lg outline outline-background -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]"
+            className="bg-button-background text-background font-primary text-[16px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium px-5 py-[13px] xl:px-5 xl:py-[14px] rounded-lg tracking-[-3%] leading-none -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]"
           >
             Join Lemvest
           </button>

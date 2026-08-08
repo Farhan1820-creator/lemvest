@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { FaqCardBackground } from "@/app/FaqCardBackground";
 
 interface FaqItem {
   question: string;
@@ -48,7 +49,7 @@ export default function Faq() {
 
   return (
     <section>
-      <div className="max-width extra-padding relative py-20">
+      <div className="max-width extra-padding relative py-14 md:py-16 lg:py-18 xl:py-20">
         <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[60px] leading-[42px] lg:leading-[46px] xl:leading-[60px] tracking-[-3%] font-medium mb-10 md:mb-16">
           <span className="text-muted-foreground">Frequently asked</span>
           <br />
@@ -67,7 +68,7 @@ export default function Faq() {
                   type="button"
                   onClick={() => toggle(index)}
                   aria-expanded={isOpen}
-                  className="shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-xl bg-muted-background flex items-center justify-center text-foreground text-[16px] tracking-[-2%] font-medium outline -outline-offset-[1px] outline-white/10"
+                  className="shrink-0 w-14 h-12 md:w-12 md:h-12 rounded-xl bg-muted-background  flex items-center justify-center text-foreground text-[30px] font-light tracking-[-2%]  outline -outline-offset-[1px] outline-white/10"
                 >
                   {isOpen ? "−" : "+"}
                 </button>
@@ -79,7 +80,7 @@ export default function Faq() {
                   className="flex-1 text-left justify-center items-center bg-muted-background rounded-xl px-5 py-3.5 md:px-6 md:py-4"
                 >
                   <span
-                    className={`block font-primary text-[14px] tracking-[-2%] font-medium text-foreground  ${
+                    className={`block font-primary text-[14px] tracking-[-2%] font-medium text-foreground dark:text-[#ffffff]  ${
                       isOpen ? "border-b-2 border-muted/70 dark:border-muted-foreground pb-2" : ""
                     }`}
                   >
@@ -93,7 +94,7 @@ export default function Faq() {
                     }}
                   >
                     <div className="overflow-hidden">
-                      <p className="pt-3 font-primary text-[14px] tracking-[-2%] font-[400] text-muted dark:text-muted-foreground leading-relaxed">
+                      <p className="pt-3 font-primary text-[14px] tracking-[-2%] font-[400] text-muted dark:text-[#bababa] leading-relaxed">
                         {item.answer}
                       </p>
                     </div>
@@ -102,9 +103,15 @@ export default function Faq() {
               </div>
             );
           })}
-        </div>
 
-        <div className="max-w-3xl mx-auto mt-6 rounded-2xl px-6 py-8 md:px-10 md:py-10 bg-gradient-to-br from-muted-background via-muted-background to-[#91fed1d5] dark:to-[#0a2e1f] flex flex-col items-start gap-5">
+        {/* Contact card — background is now the exact Figma-exported
+            gradient SVG (FaqCardBackground) instead of a Tailwind gradient.
+            Card is made `relative overflow-hidden`, the SVG is an absolute
+            fill layer behind everything (-z-10), and the original content
+            wrapper/classes are untouched so text position stays identical. */}
+        <div className="relative overflow-hidden mt-8 rounded-2xl px-6 py-8 md:px-10 md:py-5 flex flex-col items-start gap-5">
+          <FaqCardBackground className="absolute inset-0 w-full h-full -z-10" />
+
           <p className="font-primary  text-[24px] tracking-[-1%]  text-foreground leading-snug">
             Can&apos;t find the answer to
             <br />
@@ -115,11 +122,12 @@ export default function Faq() {
 
           <button
             type="button"
-            className="bg-button-background tracking-[-3%] text-background font-primary text-[16px] font-medium px-6 py-3 rounded-lg outline -outline-offset-[3px] outline-background shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]"
+            className="bg-button-background text-background font-primary text-[16px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium px-5 py-[13px] xl:px-5 xl:py-[14px] rounded-lg tracking-[-3%] leading-none outline -outline-offset-[3px] outline-background shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]"
           >
             Join Lemvest
           </button>
         </div>
+      </div>
       </div>
     </section>
   );

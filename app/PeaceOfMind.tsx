@@ -37,7 +37,7 @@ export default function PeaceOfMind() {
 
         {/* CTA button */}
         <div className="flex justify-center mt-8">
-          <button className="bg-button-background text-background font-primary font-medium text-[16px] tracking-[-3%] px-6 py-3 rounded-lg outline outline-background -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]">
+          <button className="bg-button-background text-background font-primary text-[16px] md:text-[14px] lg:text-[15px] xl:text-[16px] font-medium px-5 py-[13px] xl:px-5 xl:py-[14px] rounded-lg tracking-[-3%] leading-none outline outline-background -outline-offset-[3px] shadow-[1px_-1px_0px_0px_#000000_inset,2px_-3px_0px_0px_#00000040_inset]">
             Join Lemvest
           </button>
         </div>
