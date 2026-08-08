@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, useLayoutEffect } from "react";
 import TradingCard from "./TradingCards";
-import type { TradingCardData } from "@/lib/tradingCards";
+import type { TradingCardData } from "@/app/TradingData";
 
 function getItemsPerView() {
   if (typeof window === "undefined") return 1;
