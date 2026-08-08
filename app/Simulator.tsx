@@ -219,7 +219,7 @@ function StatsRows() {
 
 export default function Simulator() {
   return (
-    <section className="py-14 md:py-16 lg:py-18 xl:py-20">
+    <section id="lemvest-ai" className="py-14 md:py-16 lg:py-18 xl:py-20">
       <div className="max-width relative">
         <div className="md:px-7 xl:px-10">
         <h2 className="text-center font-primary text-[36px] md:text-[42px] lg:text-[48px] xl:text-[52px] leading-[42px] lg:leading-[46px] xl:leading-[50px] tracking-[-2%] font-medium mb-4">

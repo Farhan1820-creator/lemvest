@@ -31,7 +31,7 @@ export default function Navbar() {
         <ul className="hidden lg:flex items-center gap-8 font-secondary text-[14px] text-muted dark:text-muted-foreground">
           {navLinks.map((link) => (
             <li key={link.label}>
-              <Link href={link.href} className="hover:text-muted-foreground transition-colors">
+              <Link href={link.href} className="hover:text-foreground active:text-foreground  transition-colors">
                 {link.label}
               </Link>
             </li>
@@ -101,13 +101,13 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex flex-col gap-6 font-secondary text-[16px] text-[#b2b2b2]">
+        <ul className="flex flex-col gap-6 font-secondary text-[16px] text-muted-foreground hover:text-foreground active:text-foreground duration-300">
           {navLinks.map((link) => (
             <li key={link.label}>
               <Link
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="hover:text-muted-foreground transition-colors"
+                className=" transition-colors"
               >
                 {link.label}
               </Link>
